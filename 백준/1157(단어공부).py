@@ -6,6 +6,7 @@ idx = 0
 idx_list = [0] * 27
 for i in range(len(word)):
     if word[i] not in word_list:
+        #test
         # 그 문자열의 수만큼 횟수 늘려야함
         # 이정도만하면 문자열의 종류를 찾아라 정도만 해결됨
         word_list.append(word[i])
