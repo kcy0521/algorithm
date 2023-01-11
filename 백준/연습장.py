@@ -12,38 +12,38 @@
 # else:
 #   print(word_list[(cnt.index(max(cnt)))])
 
-m, n = map(int, input().split())
-arr = [input() for _ in range(m)]
-cnt = 64
-for i in range(m-7,0,-1):
-    for j in range(n-7,0,-1):
+# m, n = map(int, input().split())
+# arr = [input() for _ in range(m)]
+# cnt = 64
+# for i in range(m-7,0,-1):
+#     for j in range(n-7,0,-1):
         
-        cnt2 = 0 # 꼭지점 초기화되면 숫자 초기화
+#         cnt2 = 0 # 꼭지점 초기화되면 숫자 초기화
         
-        if arr[i][j] == 'W':
-            for k in range(8):
-                for l in range(8):
-                    if k % 2 == 0 and l % 2 == 0 and arr[i-k][j-l]=='B':
-                        cnt2 += 1
-                    elif k % 2 == 0 and l % 2 == 1 and arr[i-k][j-l]=='W':
-                        cnt2 += 1
-                    elif k % 2 == 1 and l % 2 == 0 and arr[i-k][j-l]=='W':
-                        cnt2 += 1
-                    elif k % 2 == 1 and l % 2 == 1 and arr[i-k][j-l]=='B':
-                        cnt2 += 1
+#         if arr[i][j] == 'W':
+#             for k in range(8):
+#                 for l in range(8):
+#                     if k % 2 == 0 and l % 2 == 0 and arr[i-k][j-l]=='B':
+#                         cnt2 += 1
+#                     elif k % 2 == 0 and l % 2 == 1 and arr[i-k][j-l]=='W':
+#                         cnt2 += 1
+#                     elif k % 2 == 1 and l % 2 == 0 and arr[i-k][j-l]=='W':
+#                         cnt2 += 1
+#                     elif k % 2 == 1 and l % 2 == 1 and arr[i-k][j-l]=='B':
+#                         cnt2 += 1
         
-        elif arr[i][j] == 'B':
-                for k in range(8):
-                    for l in range(8):
-                        if k % 2 == 0 and l % 2 == 0 and arr[i-k][j-l]=='W':
-                            cnt2 += 1
-                        elif k % 2 == 0 and l % 2 == 1 and arr[i-k][j-l]=='B':
-                            cnt2 += 1
-                        elif k % 2 == 1 and l % 2 == 0 and arr[i-k][j-l]=='B':
-                            cnt2 += 1
-                        elif k % 2 == 1 and l % 2 == 1 and arr[i-k][j-l]=='W':
-                            cnt2 += 1
-        if cnt2 < cnt:
-          cnt = cnt2
+#         elif arr[i][j] == 'B':
+#                 for k in range(8):
+#                     for l in range(8):
+#                         if k % 2 == 0 and l % 2 == 0 and arr[i-k][j-l]=='W':
+#                             cnt2 += 1
+#                         elif k % 2 == 0 and l % 2 == 1 and arr[i-k][j-l]=='B':
+#                             cnt2 += 1
+#                         elif k % 2 == 1 and l % 2 == 0 and arr[i-k][j-l]=='B':
+#                             cnt2 += 1
+#                         elif k % 2 == 1 and l % 2 == 1 and arr[i-k][j-l]=='W':
+#                             cnt2 += 1
+#         if cnt2 < cnt:
+#           cnt = cnt2
 
-print(cnt)
+# print(cnt)
