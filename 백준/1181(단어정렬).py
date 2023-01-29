@@ -1,17 +1,15 @@
 # 길이가 짧은 것 부터
 # 길이가 같으면 사전 순으로
 # 중복이 존재한다.!!
-
-N = int(input())
-
-arr=[0] * 20000
+import sys
+N = int(sys.stdin.readline())
+arr=[]
 for _ in range(N):
-    x = input()
-    y = len(x)
-    if [y,x] not in arr:
-        arr.append([y,x])
-
+    arr.append(sys.stdin.readline().strip())
+arr2 = set(arr)
+arr = list(arr2)
 arr.sort()
-for i in range(len(arr)):
-    if arr[i][1] != 0:
-        print(arr[i][1])
+arr.sort(key= len)
+
+for i in arr:
+    print(i)
