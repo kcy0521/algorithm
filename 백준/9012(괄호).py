@@ -1,15 +1,25 @@
-# vps인지 아니지 판단해서 결과를 말하라
-n= int(input())
+n = int(input())
 for _ in range(n):
     arr = input()
     sol = []
-    if arr[0] =='(':
-        sol.append(arr.pop(0))
-    elif arr[0] == ')':
-        sol.pop(-1)
+    cnt = 0
+    for i in range(len(arr)):
+        if arr[i] == '(':
+            sol.append(arr[i])
+        else:
+            if len(sol) == 0:
+                cnt += 1
+                break
+            else:
+                sol.pop()
     
-    if len(sol) > 0 :
-        print('No')
+    if len(sol) !=0:
+        cnt += 1
+    
+    if cnt > 0:
+        print('NO')
     else:
         print('YES')
     
+
+        
