@@ -52,9 +52,16 @@
 1 3 6 10-> 1층
 1 4 10 20-> 2층
 1 5 15 35-> 3층 
-'''
-a = [1,2,3,-1,-2,-3]
-# a.pop()
+# '''
+# a = [1,2,3,-1,-2,-3]
+# # a.pop()
 
-print(a.pop())
-print(a)
+# print(a.pop())
+# print(a)
+import sys
+
+T = int(sys.stdin.readline())
+for _ in range(T):
+    a,b = map(int,sys.stdin.readline().split())
+    print(a + b)
+    
