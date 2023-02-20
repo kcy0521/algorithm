@@ -58,10 +58,13 @@
 
 # print(a.pop())
 # print(a)
-import sys
+# import sys
 
-T = int(sys.stdin.readline())
-for _ in range(T):
-    a,b = map(int,sys.stdin.readline().split())
-    print(a + b)
-    
+# T = int(sys.stdin.readline())
+# for _ in range(T):
+#     a,b = map(int,sys.stdin.readline().split())
+#     print(a + b)
+
+n, m = map(int, input().split())
+
+print(abs(n-m))
