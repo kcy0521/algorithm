@@ -1,10 +1,13 @@
 n = int(input())
 
-# name = str(n-1) + '666'
-# print(name)
+cnt = 0
+i = 666
 
-# cnt = 1
-# while cnt < n :
-#     x - 666
-#     if str(x)
+while True:
+    if '666' in str(i):
+        cnt += 1
+        if cnt == n:
+            print(i)
+            break
 
+    i += 1
