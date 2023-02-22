@@ -65,6 +65,5 @@
 #     a,b = map(int,sys.stdin.readline().split())
 #     print(a + b)
 
-n, m = map(int, input().split())
-
-print(abs(n-m))
+arr = []
+print(arr[-1])
