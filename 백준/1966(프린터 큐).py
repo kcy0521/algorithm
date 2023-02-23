@@ -1,10 +1,30 @@
-n = int(input())
+# 현재 큐의 중요도를 확인한다
+# 나머지 문서들 중 현재 문서보다 중요도가 높은 문서가 하나라도 있다면 이 문서를 인쇄하지 않고 큐의 가장 뒤에 재배치 한다. 그렇지 않다면 바로 인쇄를 한다.
 
-for _ in range(n):
-    m, idx = map(int, input().split())
-    # m은 몇번째로 출력될까?
-    sol = [0] * 11
+# 어떠한 문서의 인쇄 순서를 말해줘라
+
+T = int(input())
+for i in range(T):
+    n, m = map(int, input().split())
     arr = list(map(int, input().split()))
 
-    # 출력되면 없게 만들고 cnt 늘릴까?
+    # 인쇄 할지 말지 검사한다
+    while True:
+        for i in range(1,len(arr)):
+            # 인쇄 불가능한 상황
+            if arr[0] > arr[i]:
+                x = arr.pop(0)
+                arr.append(x)
+                break
+        else:
+            # 인쇄 가능하다.
+            arr.pop(0)
+            break
+    
+    
+
+    
+            
+
+
     
