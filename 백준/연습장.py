@@ -65,5 +65,6 @@
 #     a,b = map(int,sys.stdin.readline().split())
 #     print(a + b)
 
-arr = []
-print(arr[-1])
+arr = [2,3,5]
+x = arr.index(2)
+print(x)
