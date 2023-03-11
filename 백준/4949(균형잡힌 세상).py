@@ -1,36 +1,47 @@
-# 온점으로 끝난다도 이용해야 할것 같은데... 
-# 갯수만 맞으면 되는게 아님 ) 나 ] 이게 먼저 나오면 안된다. 
-# 짝을 이루는 두 괄호가 있을 때, 그 사이에 있는 문자열도 균형이 잡혀야 한다. 이게 뭔말이냐 시발럼아
+# 알파벳이면 넘어가기
+# 괄호면 저장하기
+# 괄호가 맞지 않으면 바로 아웃( 조건 달기)
 
-# chat gpt는 맞았다고 하는데 백준에서는 틀렸다고 하네요 이유를 모르겠어요.[.]
+# 그전 상태가 2가 제거되면 그전이 1인지 2인지 알 수 없어진다. 
+
 while True:
     arr = input()
     if arr == '.':
         break
 
-    if arr[-1] == '.':
-        sol = []
-        for i in range(len(arr)-1):
-            if arr[i] == '(' or arr[i] == '[':
-                sol.append(arr[i])
-            elif arr[i] == ')' and len(sol) != 0: 
-                if sol[-1] == '(':
-                    sol.pop()
-                else:
-                    print('no')
-                    break
-            elif arr[i] == ']' and len(sol) != 0:
-                if sol[-1] == '[':
-                    sol.pop()
-                else:
-                    print('no')
-                    break    
-    
-        else:
-            if len(sol) == 0:
-                print('yes')
+    arr2 = arr.replace(" ", "")
+    c1 = []
+
+    for i in arr2:
+        if i == '(':
+            c1.append(i)
+        
+        elif i == '[':
+            c1.append(i)
+        
+        elif i == ')' :
+            if c1 and c1[-1] == '(':
+                c1.pop(-1)
             else:
                 print('no')
+                break
+        
+        elif i == ']':
+            if c1 and c1[-1] == '[':
+                c1.pop(-1)
+            else:
+                print('no')
+                break
+        
     else:
-        print('no')
+        if c1:
+            print('no')
+        else:
+            print('yes')
 
+
+
+        
+
+        
+    

@@ -65,3 +65,5 @@
 #     a,b = map(int,sys.stdin.readline().split())
 #     print(a + b)
 
+c2 = [1,2,3]
+print(c2[-1])
