@@ -1,31 +1,27 @@
-def push(x):
-    sol.append(x)
-
-def Ans(x):
-    
-
 n = int(input())
 sol = []
-for i in range(n):
-    arr = input().split()
-    if len(arr) > 1:
-        push(arr[1])
-    else:
-        if arr[0] == 'top':
-            if sol:
-                print(sol[-1])
-            else:
-                print(-1)
-        elif arr[0] == 'size':
-            print(len(sol))
-        elif arr[0] == 'pop':
-            if sol:
-                print(sol.pop())
-            else:
-                print(-1)
-        elif arr[0] == 'empty':
-            if sol:
-                print(0)
-            else:
-                print(1)
+a = list(input().split() for _ in range(n))
 
+for i in a:
+    if len(i) == 1:
+        if i[0] == 'top':
+            if not sol:
+                print(-1)
+            else:
+                print(sol[-1])
+        elif i[0] == 'size':
+            print(len(sol))
+        elif i[0] == 'empty':
+            if not sol:
+                print(1)
+            else:
+                print(0)
+        elif i[0] == 'pop':
+            if not sol:
+                print(-1)
+            else:
+                print(sol[-1])
+                sol.pop(-1)
+    else:
+        sol.append(i[1])
+    
