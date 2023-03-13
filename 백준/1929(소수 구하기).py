@@ -6,12 +6,12 @@ def solv(x):
 
 m, n = map(int, input().split())
 
-sol = []
-for i in range(2, 1000000):
-    if solv(i) == True:
+sol = [] # 소수 저장하는 리스트
+for i in range(m,n):
+    if solv(i) == True and i != 1:
         sol.append(i)
 
+for num in sol:
+    print(num)
 
-for i in range(m, n+1):
-    if i in sol:
-        print(i)
+

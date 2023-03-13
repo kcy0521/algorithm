@@ -65,6 +65,5 @@
 #     a,b = map(int,sys.stdin.readline().split())
 #     print(a + b)
 
-a = [1,2,3]
-a.insert(0, 4)
-print(a)
+a = [2,0,2]
+print(round(-1/3))
