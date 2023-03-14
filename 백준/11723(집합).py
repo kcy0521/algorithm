@@ -1,31 +1,36 @@
+def add(x):
+    if x not in S:
+        S.append(x)
+
+def check(x):
+    if x in S:
+        a = S.index(x)
+        S.pop(a)
+
 n = int(input())
 
-sol = []
-arr = [input().split() for _ in range(n)]
+S = []
+A = [input().split() for _ in range(n)]
 
 for i in range(n):
-    x = arr[i][0]
-    y = arr[i][1]
+    x = A[i][0]
     if x == 'add':
-        if y not in sol:
-            sol.append(y)
+        add(A[i][1])
     elif x == 'remove':
-        if y in sol:
-            idx = sol.index(y)
-            sol.pop(idx)
+        check(A[i][1])
     elif x == 'check':
-        if y in sol:
+        if A[i][1] in S:
             print(1)
         else:
             print(0)
     elif x == 'toggle':
-        if y in sol:
-          idx = sol.index(y)
-          sol.pop(idx)
+        if A[i][1] in S:
+          x = S.index(A[i][1])
+          S.pop(x)
         else:
-          sol.append(y)
+          S.append(A[i][1])
     elif x == 'all':
-        sol = ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16',"17",'18','19','20']
+        S = list(range(1,21))
     
     elif x == 'empty':
-        sol = []
+        S = []

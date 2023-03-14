@@ -65,5 +65,10 @@
 #     a,b = map(int,sys.stdin.readline().split())
 #     print(a + b)
 
-a = [2,0,2]
-print(round(-1/3))
+
+A = {}
+for i in range(2):  
+    a,b = input().split()
+    A[a] = b
+
+print(A)
