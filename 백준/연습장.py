@@ -65,10 +65,6 @@
 #     a,b = map(int,sys.stdin.readline().split())
 #     print(a + b)
 
+a = {10 : 'hello'}
 
-A = {}
-for i in range(2):  
-    a,b = input().split()
-    A[a] = b
-
-print(A)
+print(a[10])
