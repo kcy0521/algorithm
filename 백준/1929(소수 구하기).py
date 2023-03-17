@@ -1,17 +1,12 @@
-def solv(x):
-    for i in range(2,x):
-        if x % i == 0 :
-            return False
-    return True
+min_num, max_num = map(int,input().split())
+a = [True] * (max_num+1)
+x = int(max_num ** 0.5)
 
-m, n = map(int, input().split())
+for i in range(2,x+1):
+    if a[i] == True:
+        for j in range(i+i,max_num+1,i):
+            a[j] = False
 
-sol = [] # 소수 저장하는 리스트
-for i in range(m,n):
-    if solv(i) == True and i != 1:
-        sol.append(i)
-
-for num in sol:
-    print(num)
-
-
+for i in range(min_num,max_num+1):
+    if a[i] == True and i >=2:
+        print(i)

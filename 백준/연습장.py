@@ -65,6 +65,18 @@
 #     a,b = map(int,sys.stdin.readline().split())
 #     print(a + b)
 
-a = {10 : 'hello'}
 
-print(a[10])
+n= 100
+a = [True] * (n+1)
+m = int(n ** 0.5)
+
+for i in range(2,m+1):
+    if a[i] == True:
+        for j in range(i+i,n+1,i):
+            a[j] = False
+
+# for i in range(3,17):
+#     if a[i] == True:
+#         print(i)
+
+print(i for i in range(2,n+1) if a[i] == True)
