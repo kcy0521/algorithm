@@ -6,9 +6,7 @@
 
 n = int(input())
 
-# 1을 빼고 했을때
-# 3으로 먼저 나누기 했을때
-# 2로 먼저 나눌때
-
-# case 1
-n - 1
+cnt = 0
+while True :
+    
+    if 
