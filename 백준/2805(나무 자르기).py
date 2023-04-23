@@ -4,9 +4,28 @@ n, m = map(int,input().split())
 
 arr = list(map(int, input().split()))
 
-# x를 구하는 문제 
-# 둘째 줄에서 나무의 높이의 합은 항상 m보다 크거나 같다. 상근이는 집에 필요한 나무를 
-# 항상 가지고 갈 수 있다.
+# x를 기준으로 설정 
+# 만약 엑스 보다 길이가 낮다면 패스
+# 한번에 구하는 건 불가능 함 그럼 몇단계를 거쳐야 될까?
+start = 1
+end = max(arr)
 
-x = min(arr)
-cnt = 0
+while start <= end:
+    mid = (start + end) //2
+    sol = 0
+    for i in arr:
+        if i >= mid:
+            sol += i - mid
+    
+    if sol >= m:
+        start = mid + 1
+    else:
+        end = mid -1
+print(end)
+
+
+
+
+
+
+
