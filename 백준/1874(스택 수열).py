@@ -1,4 +1,13 @@
-# 수열을 만들수 있는지 없는지 확인
-# 어떤순서로 push pop 할지 
+n = int(input())
 
-n = i
+arr = [] # 주어진 수열
+for i in range(n):
+    x= int(input())
+    arr.append(x)
+
+stack = [] #스택 저장할거
+op = [] # 스택 push, pop 뭔지 저장하는 장소
+cnt = 1
+    
+
+
