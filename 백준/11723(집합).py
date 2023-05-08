@@ -1,36 +1,35 @@
-def add(x):
-    if x not in S:
-        S.append(x)
-
-def check(x):
-    if x in S:
-        a = S.index(x)
-        S.pop(a)
-
 n = int(input())
 
 S = []
-A = [input().split() for _ in range(n)]
 
-for i in range(n):
-    x = A[i][0]
-    if x == 'add':
-        add(A[i][1])
-    elif x == 'remove':
-        check(A[i][1])
-    elif x == 'check':
-        if A[i][1] in S:
-            print(1)
-        else:
-            print(0)
-    elif x == 'toggle':
-        if A[i][1] in S:
-          x = S.index(A[i][1])
-          S.pop(x)
-        else:
-          S.append(A[i][1])
-    elif x == 'all':
-        S = list(range(1,21))
-    
-    elif x == 'empty':
-        S = []
+for _ in range(n):
+    x = list(input().split())
+
+    if len(x) == 1:
+        if x[0] == 'all':
+            S = list(range(1, 21))  # int
+        
+        elif x[0] == 'empty':
+            S = []
+
+    elif len(x) == 2:
+        num = int(x[1])
+        if x[0] == 'add':
+            if num not in S:
+                S.append(num)
+
+        elif x[0] == 'remove':
+            if num in S:
+                S.pop(S.index(num))
+
+        elif x[0] == 'toggle':
+            if num in S:
+                S.pop(S.index(num))
+            else:
+                S.append(num)
+
+        elif x[0] == 'check':
+            if num in S:
+             print('1')
+            else:
+             print('0')
