@@ -81,7 +81,8 @@
 
 # print(i for i in range(2,n+1) if a[i] == True)
 
-x = list(range(1,21))
-y = x
-x.pop(x.index(3))
-print(y)
+stack = []
+if stack:
+    print('t')
+else:
+    print('f')
