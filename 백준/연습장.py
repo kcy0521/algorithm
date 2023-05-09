@@ -81,8 +81,5 @@
 
 # print(i for i in range(2,n+1) if a[i] == True)
 
-stack = []
-if stack:
-    print('t')
-else:
-    print('f')
+x = 9
+print(100//3)
