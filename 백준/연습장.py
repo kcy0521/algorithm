@@ -81,5 +81,8 @@
 
 # print(i for i in range(2,n+1) if a[i] == True)
 
-x = 9
-print(100//3)
+x = 'base'
+y = '1'
+z = [1,2,3,]
+
+print(z.index(3))
