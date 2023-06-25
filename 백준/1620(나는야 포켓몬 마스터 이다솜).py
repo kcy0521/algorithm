@@ -1,15 +1,19 @@
 n, m = map(int, input().split())
 
-book = []
+book = {}
 
-for i in range(n):
+for i in range(1,n+1):
     x = input()
-    book.append(x)
+    book[i] = x
+    book[x] = i
 
 for i in range(m):
-    x = input()
-    if x.isalpha():
-        print((book.index(x) + 1))
+    y = input()
+    if y.isdigit():
+        print(book[int(y)])
     else:
-        k = int(x) - 1
-        print(book[k])
+        print(book[y])
+
+'''
+딕셔너리를 만들어서 확인해야할놈이 문자인지 숫자인지 확인한 후에 그다음에 정답을 유추하는 문제
+'''
