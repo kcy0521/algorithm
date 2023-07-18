@@ -81,6 +81,5 @@
 
 # print(i for i in range(2,n+1) if a[i] == True)
 
-x = 99
-y = 99//2
-print(y*100 + y+1)
+print(ord('W'))
+
