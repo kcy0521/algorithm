@@ -81,5 +81,7 @@
 
 # print(i for i in range(2,n+1) if a[i] == True)
 
-print(ord('W'))
-
+x = list(input())
+for i in range(len(x)):
+    
+print(x)
