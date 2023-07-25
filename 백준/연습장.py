@@ -81,7 +81,11 @@
 
 # print(i for i in range(2,n+1) if a[i] == True)
 
-x = list(input())
-for i in range(len(x)):
+arr = []
+sol = []
+x = 0 
+sol.append(arr[0])
+for i in range(N-1):
+    if arr[i] != arr[i+1]:
+        sol.append(arr[i+1])
     
-print(x)
