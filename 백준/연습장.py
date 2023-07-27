@@ -81,11 +81,9 @@
 
 # print(i for i in range(2,n+1) if a[i] == True)
 
-arr = []
-sol = []
-x = 0 
-sol.append(arr[0])
-for i in range(N-1):
-    if arr[i] != arr[i+1]:
-        sol.append(arr[i+1])
-    
+
+a = [[1,2,3], [4,5,6]]
+
+for i in range(3):
+    for j in range(2):
+        print(a[j][i])
