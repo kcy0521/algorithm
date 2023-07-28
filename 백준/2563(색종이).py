@@ -1,5 +1,6 @@
 T = int(input())
-arr = [[0] * 100] * 100
+
+arr = [[0]* 100 for i in range(100)]
 
 sol = 0
 
@@ -13,4 +14,4 @@ for i in range(T):
 for i in range(100):
     sol += sum(arr[i])
 
-print(arr)
+print(sol)
