@@ -80,6 +80,4 @@
 # #         print(i)
 
 # print(i for i in range(2,n+1) if a[i] == True)
-
-sol = [[0] * 3 for _ in range(3)]
-print(sol)
+print(2%2)
