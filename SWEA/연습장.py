@@ -1,8 +1,6 @@
-a = [1,1,1]
+word = ['a','b']
+arr = ['c','d']
 
-x = a
-
-a[2] += 1
+x = word[0] + arr[1]
 
 print(x)
-print(a)
