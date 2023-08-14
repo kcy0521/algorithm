@@ -1,6 +1,8 @@
-word = ['a','b']
-arr = ['c','d']
-
-x = word[0] + arr[1]
-
-print(x)
+a = [1,2,3,4,5]
+N = 5
+for i in range(N):
+    print(i)
+    print(N)
+    if i == 2:
+        N -= 1 # 영향이 없다는 것이다. 
+    print('횟수') #5번이 출력된다! 이게 뭐 어떻게 문제가 되는가? 5번 출력되는건 변함이 없네 하 시
