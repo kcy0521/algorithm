@@ -1,12 +1,3 @@
-# d1 = (r-x1)
+arr = [list(input()) for _ in range(5)]
 
-# d2 = (x2 - r)
-
-# F1 = m1 / (r-x1) ** 2
-
-# F2 = m2 / (x2-r) ** 2
-
-# m1 / (r-x1) ** 2 = m2 / (x2-r) ** 2
-
-# (m1 / m2) ** 1/2 = (r-x1) / x2 - r
-
+print(arr)
