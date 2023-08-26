@@ -11,11 +11,13 @@ for tc in range(1,T+1):
     for i in range(N):
         if sol == 'YES':
             break
+        
         for j in range(N):
             if sol == 'YES':
                 break
 
             if arr[i][j] == 'o':
+                
                 for k in range(8): # 8번의 방향 
                     idx = 1
                     check = 1
@@ -28,11 +30,14 @@ for tc in range(1,T+1):
                             try:
                                 if arr[i][j+idx] == 'o':
                                     check += 1
-                                    idx += 1
                                 else:
                                     if check >= 5:
                                         sol = 'YES'
+                                    else:
+                                        idx = 1
+                                        check = 1
                                     break
+                                idx += 1
                             except:
                                 if check >= 5:
                                     sol = 'YES'
@@ -42,11 +47,12 @@ for tc in range(1,T+1):
                             try:
                                 if arr[i][j-idx] == 'o':
                                     check += 1
-                                    idx += 1
+                                    
                                 else:
                                     if check >= 5:
                                         sol = 'YES'
                                     break
+                                idx += 1
                             except:
                                 if check >= 5:
                                     sol = 'YES'
@@ -57,11 +63,11 @@ for tc in range(1,T+1):
                             try:
                                 if arr[i+idx][j] == 'o':
                                     check += 1
-                                    idx += 1
                                 else:
                                     if check >= 5:
                                         sol = 'YES'
                                     break
+                                idx += 1
                             except:
                                 if check >= 5:
                                     sol = 'YES'
@@ -71,11 +77,11 @@ for tc in range(1,T+1):
                             try:
                                 if arr[i-idx][j] == 'o':
                                     check += 1
-                                    idx += 1
                                 else:
                                     if check >= 5:
                                         sol = 'YES'
                                     break
+                                idx += 1
                             except:
                                 if check >= 5:
                                     sol = 'YES'
@@ -86,11 +92,11 @@ for tc in range(1,T+1):
                             try:
                                 if arr[i-idx][j-idx] == 'o':
                                     check += 1
-                                    idx += 1
                                 else:
                                     if check >= 5:
                                         sol = 'YES'
                                     break
+                                idx += 1
                             except:
                                 if check >= 5:
                                     sol = 'YES'
@@ -100,11 +106,11 @@ for tc in range(1,T+1):
                             try:
                                 if arr[i-idx][j+idx] == 'o':
                                     check += 1
-                                    idx += 1
                                 else:
                                     if check >= 5:
                                         sol = 'YES'
                                     break
+                                idx += 1
                             except:
                                 if check >= 5:
                                     sol = 'YES'
@@ -115,11 +121,11 @@ for tc in range(1,T+1):
                             try:
                                 if arr[i+idx][j-idx] == 'o':
                                     check += 1
-                                    idx += 1
                                 else:
                                     if check >= 5:
                                         sol = 'YES'
                                     break
+                                idx += 1
                             except:
                                 if check >= 5:
                                     sol = 'YES'
@@ -129,11 +135,11 @@ for tc in range(1,T+1):
                             try:
                                 if arr[i+idx][j+idx] == 'o':
                                     check += 1
-                                    idx += 1
                                 else:
                                     if check >= 5:
                                         sol = 'YES'
                                     break
+                                idx += 1
                             except:
                                 if check >= 5:
                                     sol = 'YES'
