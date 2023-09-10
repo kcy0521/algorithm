@@ -1,3 +1,4 @@
-arr = [list(map(int,input().split())) for _ in range(3)]
+a = [1,2,4]
 
-print(arr)
+print(len(a))
+k = 3
