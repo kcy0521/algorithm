@@ -1,4 +1,4 @@
-ar = [2,3,1]
-bb = list(ar)
-ar.pop()
-print(type(bb))
+a = [1,2]
+b = [2,4]
+
+print(a+b)
