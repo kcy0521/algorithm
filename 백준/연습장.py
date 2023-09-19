@@ -1,4 +1,3 @@
-a = [1,2]
-b = [2,4]
-
-print(a+b)
+a = [3,5,2]
+a.pop(a.index(3))
+print(a)
