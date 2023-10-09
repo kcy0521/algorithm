@@ -1,3 +1,5 @@
-a = [3,5,2]
-a.pop(a.index(3))
+a = ['ac','ab','ao','bb']
+
+a.sort(reverse=True)
+
 print(a)
