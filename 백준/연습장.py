@@ -1,5 +1,4 @@
-a = ['ac','ab','ao','bb']
-
-a.sort(reverse=True)
+a = [-2,4,-6,3,1]
+a.sort()
 
 print(a)
