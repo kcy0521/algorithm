@@ -1,4 +1,3 @@
-a = [-2,4,-6,3,1]
-a.sort()
+from math import gcd
 
-print(a)
+print(gcd(31,35))
