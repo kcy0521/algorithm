@@ -1,3 +1,4 @@
-from math import gcd
+# from math import gcd
 
-print(gcd(31,35))
+# print(gcd(31,35))
+
