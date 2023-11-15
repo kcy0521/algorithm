@@ -1,5 +1,6 @@
-a = [2,3,4]
 
-a.pop(-1)
-a.append(-1)
-print(a)
+a = [0]
+b = [1,2,3]
+c = list(map(int,input().split()))
+
+print(c)
