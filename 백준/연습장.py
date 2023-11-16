@@ -1,6 +1,5 @@
 
-a = [0]
-b = [1,2,3]
-c = list(map(int,input().split()))
 
-print(c)
+a = [1,2,3,4,5]
+
+for i in range(5):
