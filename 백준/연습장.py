@@ -1,5 +1,2 @@
-
-
-a = [1,2,3,4,5]
-
-for i in range(5):
+direction = {"up":1,"down":-1,'left':-1,'right':1}
+print(direction["up"])

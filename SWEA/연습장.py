@@ -1,4 +1,4 @@
-a = [1,2,4]
+a = [3,4,5]
 
-print(len(a))
-k = 3
+for n in a:
+    print(n)

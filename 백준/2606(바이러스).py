@@ -1,11 +1,22 @@
+### DFS 버전
+
 n = int(input())
 m = int(input())
 
-# 1부터 n까지 수가 있는데 
+graph = [[]for _ in range(n+1)]
 
-arr = []
 for i in range(m):
-    x,y = map(int,input().split())
-    arr.append([x,y])
+    a,b = map(int,input().split())
+    graph[a] += [b]
+    graph[b] += [a]
 
-print(arr)
+visited = [0] * (n+1)
+
+def dfs(v):
+    visited[v] = 1
+    for i in graph[v]:
+        if visited[i] == 0:
+            dfs(i)
+dfs(1)
+
+print(sum(visited)-1)
